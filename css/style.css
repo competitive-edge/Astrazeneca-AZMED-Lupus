@@ -345,7 +345,7 @@ header .menu li a {
         animation: topbarClose 1s;
         top: 0px;
         transform: rotate(0deg);
-        background: #2d2d2d2d;
+        background: #2d2d2d;
     }
 
     /* Fade out the second bar */
@@ -360,7 +360,7 @@ header .menu li a {
         animation: bottombarClose 1s;
         top: 0px;
         transform: rotate(0deg);
-        background: #fff;
+        background: #2d2d2d;
     }
 
     header .menu {
@@ -474,7 +474,7 @@ section.desvendando {
 
 @media (max-width: 991px) {
     section.desvendando {
-        scroll-margin-top: 20px;
+        scroll-margin-top: 60px;
     }
 }
 
@@ -494,7 +494,7 @@ section.manifestacoes {
 
 @media (max-width: 991px) {
     section.manifestacoes {
-        scroll-margin-top: 20px;
+        scroll-margin-top: 60px;
     }
 }
 
@@ -555,7 +555,7 @@ section.cutanea {
 
 @media (max-width: 991px) {
     section.cutanea {
-        scroll-margin-top: 20px;
+        scroll-margin-top: 60px;
     }
 }
 .cutanea {
@@ -632,7 +632,7 @@ section.desafios {
 
 @media (max-width: 991px) {
     section.desafios {
-        scroll-margin-top: 20px;
+        scroll-margin-top: 60px;
     }
 }
 
@@ -657,7 +657,7 @@ section.manejo {
 
 @media (max-width: 991px) {
     section.manejo {
-        scroll-margin-top: 20px;
+        scroll-margin-top: 60px;
     }
 }
 
@@ -739,7 +739,7 @@ section.terapias {
 
 @media (max-width: 991px) {
     section.terapias {
-        scroll-margin-top: 20px;
+        scroll-margin-top: 60px;
     }
 }
 
@@ -813,7 +813,7 @@ section.marca {
 
 @media (max-width: 991px) {
     section.marca {
-        scroll-margin-top: 20px;
+        scroll-margin-top: 60px;
     }
 }
 

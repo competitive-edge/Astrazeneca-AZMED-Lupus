@@ -91,7 +91,7 @@ p {
 }
 
 .header .container {
-    width: 1012px;
+    width: 1028px;
     max-width: 100%;
 }
 
@@ -106,7 +106,7 @@ header .menu {
     display: inline-flex;
     padding: 14px 24px;
     align-items: center;
-    gap: 24px;
+    gap: 28px;
     margin: 0;
 }
 
@@ -484,7 +484,7 @@ section.manifestacoes {
     padding: 24px 40px;
     flex-direction: row;
     align-items: flex-start;
-    gap: 10px;
+    gap: 26px;
     border-radius: 24px;
     background: #F2EAEB;
     margin-top: 33px;
@@ -538,25 +538,54 @@ section.cutanea {
 }
 
 .cutanea .img-foto-cutanea {
-    max-width: 392px;
+    max-width: 100%;
     height: auto;
-    padding: 41px 8px 0 0;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+}
+
+.cutanea .box-texto {
+    padding-left: 32px;
+}
+
+.cutanea p {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 992px) {
+    .cutanea .mobile-cutanea {
+        align-items: flex-start;
+    }
+
+    .cutanea .img-foto-cutanea {
+        max-width: 392px;
+        padding-top: 10px;
+    }
+
+    .cutanea .box-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 991px) {
     .cutanea .mobile-cutanea {
-        display: flex !important;
         flex-direction: column;
     }
 
     .cutanea .img-foto-cutanea {
-        max-width: 366px;
-        height: auto;
-        padding: 0;
-        margin: 20px 0;
+        margin: 0 auto 24px auto;
     }
 
+    .cutanea .box-texto {
+        padding-left: 0;
+        text-align: center;
+    }
 }
+
 
 .sem-padding-right {
     padding-right: 0 !important;
@@ -607,7 +636,7 @@ section.manejo {
 }
 
 .manejo h2 {
-    font-size: 20px;
+    font-size: 24px;
     text-transform: uppercase;
     margin: 40px 0;
 }

@@ -14,37 +14,54 @@ $(".menu li a.menu-item").click(function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuItems = document.querySelectorAll(".menu-hover");
-
-    menuItems.forEach((item) => {
-        item.addEventListener("click", function () {
-            menuItems.forEach((el) => el.classList.remove("clicked")); // remove de todos
-            this.classList.add("clicked"); // adiciona no clicado
-        });
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".header");
 
+    // Pega os itens do menu e mapeia o href para o elemento da section
+    const sectionMap = [];
+    menuItems.forEach(item => {
+        const href = item.getAttribute("href");
+        const section = document.querySelector(href);
+        if (section) {
+            sectionMap.push({
+                id: href,
+                element: section,
+                menuItem: item
+            });
+        }
+    });
+
     function handleScroll() {
-        if (window.scrollY > 10) {
+        const scrollY = window.scrollY;
+        const offset = 150; // ajuste se necessário dependendo do tamanho do seu header
+
+        // Atualiza classe 'scrolled' no header
+        if (scrollY > 10) {
             header.classList.add("scrolled");
         } else {
             header.classList.remove("scrolled");
         }
+
+        // Verifica qual seção está visível
+        let current = null;
+        sectionMap.forEach(({ id, element }) => {
+            const top = element.offsetTop - offset;
+            const bottom = top + element.offsetHeight;
+            if (scrollY >= top && scrollY < bottom) {
+                current = id;
+            }
+        });
+
+        // Atualiza a classe 'clicked' no menu
+        menuItems.forEach(item => {
+            if (item.getAttribute("href") === current) {
+                item.classList.add("clicked");
+            } else {
+                item.classList.remove("clicked");
+            }
+        });
     }
 
-    // Aplica no carregamento
+    // Inicia e escuta scroll
     handleScroll();
-
-    // Aplica ao rolar
     window.addEventListener("scroll", handleScroll);
-
-    // Aplica ao clicar em links do menu
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
-        link.addEventListener("click", function () {
-            header.classList.add("scrolled");
-        });
-    });
 });

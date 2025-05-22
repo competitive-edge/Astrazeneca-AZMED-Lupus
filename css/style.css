@@ -666,6 +666,7 @@ section.manejo {
 .manejo .box-manejo {
     display: flex;
     max-width: 498px;
+    height: 181px;
     padding: 24px 16px;
     justify-content: center;
     align-items: center;
@@ -699,6 +700,12 @@ section.manejo {
 
 .manejo .texto-manejo span {
     letter-spacing: -0.4px;
+}
+
+@media (max-width: 991px) {
+    .manejo .box-manejo {
+        height: 233px;
+    }
 }
 
 section.terapias {

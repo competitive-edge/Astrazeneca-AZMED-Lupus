@@ -513,6 +513,7 @@ section.manifestacoes {
 .manifestacoes .box-manifestacoes h6 {
     font-size: 20px;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .manifestacoes .box-manifestacoes p {

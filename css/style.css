@@ -166,6 +166,13 @@ header .menu li a {
     }
 }
 
+
+@media (max-width: 576px) {
+    .header {
+        padding-top: 150px;
+    }
+}
+
 /*Menu mobile */
 @media (max-width: 991.8px) {
     header .abrirMenu {
@@ -451,6 +458,14 @@ header .menu li a {
     font-size: 28px;
     padding: 7px 32px;
     text-align: left;
+}
+
+
+@media (max-width: 576px) {
+    .title_bg h3 {
+        font-size: 22px;
+        padding: 9px 20px;
+    }
 }
 
 section.desvendando {
@@ -824,11 +839,6 @@ section.marca {
 }
 
 @media (max-width: 575px) {
-    .row>* {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-
     .marca .box-lupus p {
         padding: 42px 0px;
     }
